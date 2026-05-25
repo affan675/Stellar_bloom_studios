@@ -282,10 +282,8 @@ Simply include a copy of the license and give credit to the original author.
 
 **Your Name / Studio Name**
 
-
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [@yourprofile](https://github.com/yourprofile)
-- 📧 Email: your.email@example.com
+- 🐙 GitHub: [@yourprofile](https://github.com/affan675)
+- 📧 Email: your.affanadil119@gmail.com
 
 ---
 
