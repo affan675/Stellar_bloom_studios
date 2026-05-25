@@ -1,0 +1,410 @@
+
+        /* ==================================================
+           HAMBURGER BUTTON
+           Hidden on desktop, shown on mobile (≤768px)
+        ================================================== */
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .hamburger-btn {
+            display: none;              /* hidden on desktop */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 42px;
+            height: 42px;
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            cursor: none;
+            padding: 8px;
+            transition: background-color 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+            flex-shrink: 0;
+        }
+        .hamburger-btn:hover {
+            background-color: var(--button-bg-primary);
+            border-color: var(--accent-pink);
+            filter: var(--bloom-glow);
+        }
+
+        .ham-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: var(--text-secondary);
+            border-radius: 2px;
+            transform-origin: center;
+            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                        opacity   0.25s ease,
+                        background-color 0.3s ease;
+        }
+        .hamburger-btn:hover .ham-bar {
+            background-color: var(--button-text-primary);
+        }
+
+        /* Animated X state when menu is open */
+        .hamburger-btn[aria-expanded="true"] .ham-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger-btn[aria-expanded="true"] .ham-bar:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger-btn[aria-expanded="true"] .ham-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ==================================================
+           MOBILE MENU DRAWER
+           Slides down from header, hidden by default
+        ================================================== */
+        .mobile-menu {
+            display: none;              /* layout off on desktop */
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(14px);
+            border-top: 1px solid var(--border-color);
+            transition: max-height 0.42s cubic-bezier(0.23, 1, 0.32, 1),
+                        opacity    0.35s ease;
+        }
+        .mobile-menu.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+
+        .mobile-menu nav ul {
+            list-style: none;
+            padding: 1rem 0 1.4rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 0.9rem 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            border-left: 3px solid transparent;
+            transition: color 0.25s ease,
+                        border-left-color 0.25s ease,
+                        background-color 0.25s ease,
+                        padding-left 0.25s ease;
+            letter-spacing: 0.04em;
+        }
+        .mobile-nav-link:hover,
+        .mobile-nav-link:focus-visible {
+            color: var(--accent-pink);
+            border-left-color: var(--accent-gold);
+            background-color: rgba(255,105,180,0.07);
+            padding-left: 2.5rem;
+            filter: var(--bloom-glow);
+        }
+
+        /* Staggered slide-in for each menu item */
+        .mobile-menu nav ul li {
+            opacity: 0;
+            transform: translateX(-18px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .mobile-menu.open nav ul li:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
+        .mobile-menu.open nav ul li:nth-child(2) { opacity:1; transform:none; transition-delay:0.11s; }
+        .mobile-menu.open nav ul li:nth-child(3) { opacity:1; transform:none; transition-delay:0.17s; }
+        .mobile-menu.open nav ul li:nth-child(4) { opacity:1; transform:none; transition-delay:0.23s; }
+
+        /* Overlay backdrop (optional dim) */
+        .menu-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 900;
+            background: rgba(0,0,0,0.35);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .menu-backdrop.visible {
+            display: block;
+            opacity: 1;
+        }
+
+
+        /* ==================================================
+           1. TABLET LANDSCAPE — ≤ 1024px
+        ================================================== */
+        @media (max-width: 1024px) {
+
+            .main-nav ul { gap: 1.4rem; }
+
+            .hero-section {
+                padding: 6rem 1.5rem 4rem;
+                min-height: 80vh;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .about-content { gap: 3rem; }
+
+            .section-title {
+                font-size: clamp(1.8rem, 4vw, 3rem);
+                margin-bottom: 3rem;
+            }
+
+            .contact-form { max-width: 36rem; }
+        }
+
+        /* ==================================================
+           2. TABLET PORTRAIT / LARGE PHONE — ≤ 768px
+           Hamburger activates here, desktop nav hides
+        ================================================== */
+        @media (max-width: 768px) {
+
+            /* --- Header layout --- */
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.75rem 1.25rem;
+                flex-wrap: nowrap;
+            }
+
+            /* Hide desktop nav, show hamburger */
+            .main-nav { display: none; }
+            .hamburger-btn { display: flex; }
+
+            /* Mobile menu is now in the DOM layout */
+            .mobile-menu { display: block; }
+
+            .site-logo { font-size: 1.55rem; }
+
+            .theme-toggle-btn {
+                font-size: 0.78rem;
+                padding: 0.45rem 0.85rem;
+                white-space: nowrap;
+            }
+
+            /* --- Hero --- */
+            .hero-section {
+                min-height: 75vh;
+                padding: 5rem 1.25rem 3.5rem;
+            }
+            .hero-section h1 {
+                font-size: clamp(1.8rem, 7vw, 3rem);
+                margin-bottom: 1rem;
+            }
+            .hero-section .tagline {
+                font-size: clamp(0.95rem, 3vw, 1.15rem);
+                margin-bottom: 2.2rem;
+            }
+
+            /* --- Services --- */
+            .services-section { padding: 4rem 0; }
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.6rem;
+                margin-top: 0.5rem;
+            }
+            .service-card {
+                padding: 1.8rem 1.5rem;
+                border-radius: 1rem;
+            }
+            .service-card h3 { font-size: 1.25rem; }
+            .service-icon { font-size: 2rem; }
+
+            /* --- Spacing & titles --- */
+            .section-spacing { padding: 4rem 0; }
+            .section-title {
+                font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+                margin-bottom: 2.2rem;
+            }
+            .section-title::after { width: 5rem; height: 3px; }
+
+            /* --- About --- */
+            .about-section { padding: 4rem 0; }
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
+                margin-top: 1rem;
+            }
+            .about-text {
+                min-width: unset;
+                width: 100%;
+                text-align: center;
+            }
+            .about-text p { font-size: 1rem; text-align: left; }
+            .skills-list {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+                margin: 1.4rem 0 2rem;
+            }
+            .skills-list li { font-size: 0.92rem; padding: 0.65rem 1rem; }
+            .about-illustration {
+                min-width: unset;
+                width: min(100%, 26rem);
+                transform: rotateZ(0deg);
+                margin: 0 auto;
+            }
+
+            /* --- Contact --- */
+            .contact-section { padding: 4rem 0; }
+            .contact-intro { font-size: 1rem; margin-bottom: 1.8rem; }
+            .contact-form {
+                max-width: 100%;
+                padding: 1.8rem 1.4rem;
+                border-radius: 0.85rem;
+            }
+            .contact-form label { font-size: 0.92rem; }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.95rem;
+                padding: 0.75rem 1rem;
+            }
+            .contact-form textarea { min-height: 7rem; }
+            .contact-form .btn-primary {
+                width: 100%;
+                text-align: center;
+                padding: 0.9rem 1.5rem;
+            }
+
+            /* --- Buttons --- */
+            .btn { padding: 0.85rem 1.8rem; font-size: 0.9rem; }
+
+            /* --- Footer --- */
+            .main-footer { padding: 1.6rem 0; }
+            .main-footer p { font-size: 0.82rem; }
+
+            /* --- Pre-loader --- */
+            .preloader-bloom { width: 65px; height: 65px; }
+            .preloader-text  { font-size: 1rem; }
+        }
+
+        /* ==================================================
+           3. SMALL PHONE — ≤ 480px
+        ================================================== */
+        @media (max-width: 480px) {
+
+            .header-container { padding: 0.6rem 1rem; }
+            .site-logo { font-size: 1.3rem; }
+
+            .theme-toggle-btn {
+                font-size: 0.72rem;
+                padding: 0.4rem 0.7rem;
+            }
+
+            .hamburger-btn {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero-section {
+                min-height: 70vh;
+                padding: 4.5rem 1rem 3rem;
+            }
+            .hero-section h1 {
+                font-size: clamp(1.55rem, 8vw, 2.4rem);
+                line-height: 1.3;
+            }
+            .hero-section .tagline {
+                font-size: 0.92rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .services-grid { gap: 1.2rem; }
+            .service-card  { padding: 1.5rem 1.2rem; }
+            .service-card h3 { font-size: 1.1rem; }
+            .service-card p  { font-size: 0.9rem; }
+
+            .section-title {
+                font-size: clamp(1.4rem, 6vw, 2rem);
+                margin-bottom: 1.8rem;
+            }
+
+            .about-text p { font-size: 0.95rem; }
+            .skills-list li {
+                font-size: 0.88rem;
+                padding: 0.6rem 0.9rem;
+                border-left-width: 4px;
+            }
+
+            .contact-form { padding: 1.4rem 1rem; }
+            .contact-form label { font-size: 0.88rem; }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.9rem;
+                padding: 0.7rem 0.9rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 0.8rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .container { padding: 0 1rem; }
+            .section-spacing { padding: 3rem 0; }
+            .main-footer p { font-size: 0.78rem; padding: 0 1rem; }
+
+            .mobile-nav-link { font-size: 1rem; padding: 0.8rem 1.5rem; }
+        }
+
+        /* ==================================================
+           4. VERY SMALL PHONE — ≤ 360px  (Galaxy S, iPhone SE)
+        ================================================== */
+        @media (max-width: 360px) {
+
+            .site-logo { font-size: 1.15rem; }
+
+            /* Hide theme label, keep icon feel */
+            .theme-toggle-btn { font-size: 0.68rem; padding: 0.35rem 0.6rem; }
+
+            .hero-section h1    { font-size: 1.4rem; }
+            .hero-section .tagline { font-size: 0.85rem; }
+
+            .section-title { font-size: 1.3rem; margin-bottom: 1.4rem; }
+            .service-card h3 { font-size: 1rem; }
+            .service-card p,
+            .about-text p,
+            .contact-intro { font-size: 0.88rem; }
+
+            .contact-form { padding: 1.2rem 0.85rem; }
+            .btn { font-size: 0.8rem; padding: 0.7rem 1rem; }
+
+            .preloader-bloom { width: 52px; height: 52px; }
+
+            .mobile-nav-link { font-size: 0.95rem; padding: 0.75rem 1.2rem; }
+        }
+
+        /* ==================================================
+           5. LANDSCAPE PHONE — rotated sideways
+        ================================================== */
+        @media (max-height: 500px) and (orientation: landscape) and (hover: none) {
+
+            .header-container {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap: 0.5rem;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+                padding: 4rem 1.5rem 2rem;
+            }
+            .hero-section h1      { font-size: 1.7rem; margin-bottom: 0.6rem; }
+            .hero-section .tagline { font-size: 0.88rem; margin-bottom: 1.2rem; }
+
+            .section-spacing { padding: 2.5rem 0; }
+
+            /* Mobile menu goes side-panel in landscape */
+            .mobile-menu.open { max-height: 260px; }
+        }

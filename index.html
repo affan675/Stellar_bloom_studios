@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Bloom Studios - Cosmic Web Cultivator</title>
+
+    <!-- font-display: swap added via &display=swap parameter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">       
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body data-theme="day">
+
+    <!-- Skip to content — accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- =====================================================
+         PRE-LOADER
+         ===================================================== -->
+    <div id="preloader" role="status" aria-label="Loading Stellar Bloom Studios">
+        <div class="preloader-bloom" aria-hidden="true">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+        <p class="preloader-text">Planting seeds…</p>
+    </div>
+
+    <!-- Custom cursor -->
+    <div id="custom-cursor" aria-hidden="true"></div>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#hero" class="site-logo">Stellar Bloom Studios</a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#hero"     class="nav-link">Cosmic Horizon</a></li>
+                    <li><a href="#services" class="nav-link">Garden Services</a></li>
+                    <li><a href="#about"    class="nav-link">The Cultivator</a></li>
+                    <li><a href="#contact"  class="nav-link">Plant a Seed</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle day/night theme">
+                    Toggle Lunar Cycle
+                </button>
+                <button id="hamburger" class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                    <span class="ham-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <nav aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="#hero"     class="mobile-nav-link">✦ Cosmic Horizon</a></li>
+                    <li><a href="#services" class="mobile-nav-link">✦ Garden Services</a></li>
+                    <li><a href="#about"    class="mobile-nav-link">✦ The Cultivator</a></li>
+                    <li><a href="#contact"  class="mobile-nav-link">✦ Plant a Seed</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section id="hero" class="hero-section text-center" aria-label="Hero">
+            <div class="hero-content reveal-item">
+                <h1>Where Pixels Blossom: Cultivating Your Digital Universe</h1>
+                <p class="tagline">
+                    Nurturing ideas from stardust to stunning web realities — designs that bloom and expand across the cosmos.
+                </p>
+                <a href="#services" class="btn btn-primary"><span>Discover Our Flora</span></a>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services-section section-spacing" aria-label="Services">
+            <div class="container text-center">
+                <h2 class="section-title reveal-item">Our Celestial Gardening Services</h2>
+                <div class="services-grid">
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">✦</span>
+                        <h3>Responsive Starfield Design</h3>
+                        <p>Websites that shimmer and adapt beautifully, from the smallest comet to the largest galaxy display.</p>
+                    </article>
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">◈</span>
+                        <h3>User Journey Constellations</h3>
+                        <p>Mapping intuitive pathways and smooth interactions, guiding visitors through a captivating digital journey.</p>
+                    </article>
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">❋</span>
+                        <h3>Nebula-Inspired Animations</h3>
+                        <p>Softly expanding and glowing effects that bring life and wonder to your digital presence.</p>
+                    </article>
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">⬡</span>
+                        <h3>Digital Landscape Development</h3>
+                        <p>Building robust and scalable web applications — the fertile ground for your online growth.</p>
+                    </article>
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">✿</span>
+                        <h3>Cosmic Content Nurturing</h3>
+                        <p>Crafting engaging narratives and vibrant imagery that resonate through the digital expanse.</p>
+                    </article>
+                    <article class="service-card reveal-item">
+                        <span class="service-icon" aria-hidden="true">⊛</span>
+                        <h3>Orbital SEO & Maintenance</h3>
+                        <p>Ensuring your digital garden is visible and thriving, constantly tended for optimal growth.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section section-spacing" aria-label="About">
+            <div class="container text-center">
+                <h2 class="section-title reveal-item">The Cosmic Cultivator: Tending Digital Gardens</h2>
+                <div class="about-content">
+                    <div class="about-text reveal-item">
+                        <p>
+                            Welcome, fellow voyager! I am the chief cosmic cultivator at Stellar Bloom Studios. My journey began with a fascination for patterns — from the intricate spirals of galaxies to the delicate veins of a leaf. I found my calling in translating these natural wonders into compelling digital experiences.
+                        </p>
+                        <p>
+                            Every project is approached with the care of a gardener, understanding its unique ecosystem and guiding its growth from a nascent seed of an idea to a fully blooming online presence. Let's plant the seeds for your next digital masterpiece.
+                        </p>
+                        <ul class="skills-list" aria-label="Skills">
+                            <li>Celestial UI/UX Design</li>
+                            <li>Responsive Galaxy Layouts</li>
+                            <li>Gradient &amp; Bloom Effects</li>
+                            <li>Starfield Animation</li>
+                            <li>Content Nebula Formation</li>
+                            <li>Interstellar E-commerce</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary"><span>Send a Meteor Shower Message</span></a>
+                    </div>
+
+                    <!-- FIX: Replaced via.placeholder.com with inline SVG cosmic illustration -->
+                    <div class="about-illustration reveal-item" role="img" aria-label="Cosmic bloom garden illustration">
+                        <svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg" style="background:linear-gradient(160deg,#1a0d2a 0%,#4b0082 60%,#2a0e40 100%)">
+                            <!-- Stars background -->
+                            <circle cx="40"  cy="30"  r="1.2" fill="white" opacity="0.8"/>
+                            <circle cx="120" cy="15"  r="0.8" fill="white" opacity="0.6"/>
+                            <circle cx="200" cy="45"  r="1.5" fill="white" opacity="0.9"/>
+                            <circle cx="310" cy="20"  r="1"   fill="white" opacity="0.7"/>
+                            <circle cx="420" cy="40"  r="1.3" fill="white" opacity="0.8"/>
+                            <circle cx="470" cy="10"  r="0.9" fill="white" opacity="0.5"/>
+                            <circle cx="70"  cy="80"  r="0.7" fill="white" opacity="0.6"/>
+                            <circle cx="380" cy="70"  r="1.1" fill="white" opacity="0.7"/>
+                            <circle cx="250" cy="10"  r="0.6" fill="white" opacity="0.5"/>
+                            <circle cx="460" cy="90"  r="0.8" fill="white" opacity="0.6"/>
+                            <!-- Nebula glow -->
+                            <ellipse cx="250" cy="180" rx="180" ry="120" fill="rgba(138,43,226,0.18)"/>
+                            <ellipse cx="320" cy="200" rx="100" ry="70"  fill="rgba(255,20,147,0.12)"/>
+                            <ellipse cx="170" cy="160" rx="80"  ry="50"  fill="rgba(0,255,255,0.08)"/>
+                            <!-- Ground curve -->
+                            <path d="M0 290 Q250 240 500 290 L500 360 L0 360 Z" fill="rgba(72,0,130,0.6)"/>
+                            <!-- Main stem -->
+                            <path d="M250 360 Q240 280 250 210" stroke="#68d391" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <!-- Left branch -->
+                            <path d="M248 270 Q220 240 195 220" stroke="#68d391" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <!-- Right branch -->
+                            <path d="M250 255 Q275 230 300 215" stroke="#68d391" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <!-- Left bloom petals -->
+                            <g transform="translate(195,210)">
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#ff69b4" opacity="0.95" transform="rotate(0)"/>
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#ff1493" opacity="0.9"  transform="rotate(60)"/>
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#da70d6" opacity="0.9"  transform="rotate(120)"/>
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#ff69b4" opacity="0.9"  transform="rotate(180)"/>
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#ff1493" opacity="0.9"  transform="rotate(240)"/>
+                                <ellipse cx="0" cy="-16" rx="9"  ry="16" fill="#da70d6" opacity="0.9"  transform="rotate(300)"/>
+                                <circle  cx="0" cy="0"   r="7"           fill="#ffd700"/>
+                                <circle  cx="0" cy="0"   r="4"           fill="#fff8dc"/>
+                            </g>
+                            <!-- Right bloom petals -->
+                            <g transform="translate(300,208)">
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#00ffff" opacity="0.9"  transform="rotate(0)"/>
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#87ceeb" opacity="0.9"  transform="rotate(60)"/>
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#00bfff" opacity="0.9"  transform="rotate(120)"/>
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#00ffff" opacity="0.9"  transform="rotate(180)"/>
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#87ceeb" opacity="0.9"  transform="rotate(240)"/>
+                                <ellipse cx="0" cy="-14" rx="8"  ry="14" fill="#00bfff" opacity="0.9"  transform="rotate(300)"/>
+                                <circle  cx="0" cy="0"   r="6"           fill="#ffd700"/>
+                                <circle  cx="0" cy="0"   r="3.5"         fill="#fff8dc"/>
+                            </g>
+                            <!-- Main top bloom petals -->
+                            <g transform="translate(250,205)">
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#ff69b4" opacity="0.95" transform="rotate(0)"/>
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#da70d6" opacity="0.9"  transform="rotate(60)"/>
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#ff1493" opacity="0.9"  transform="rotate(120)"/>
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#ff69b4" opacity="0.9"  transform="rotate(180)"/>
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#da70d6" opacity="0.9"  transform="rotate(240)"/>
+                                <ellipse cx="0" cy="-22" rx="12" ry="22" fill="#ff1493" opacity="0.9"  transform="rotate(300)"/>
+                                <circle  cx="0" cy="0"   r="12"          fill="#ffd700"/>
+                                <circle  cx="0" cy="0"   r="7"           fill="#fffacd"/>
+                            </g>
+                            <!-- Leaves -->
+                            <ellipse cx="232" cy="295" rx="18" ry="8" fill="#2d6a4f" opacity="0.9" transform="rotate(-30,232,295)"/>
+                            <ellipse cx="268" cy="310" rx="18" ry="8" fill="#40916c" opacity="0.9" transform="rotate(25,268,310)"/>
+                            <!-- Sparkles / stars around bloom -->
+                            <text x="160" y="160" font-size="18" fill="#ffd700" opacity="0.9" font-family="serif">✦</text>
+                            <text x="330" y="150" font-size="14" fill="#ff69b4" opacity="0.9" font-family="serif">✦</text>
+                            <text x="280" y="140" font-size="10" fill="white"   opacity="0.7" font-family="serif">✦</text>
+                            <text x="205" y="175" font-size="8"  fill="#87ceeb" opacity="0.8" font-family="serif">✦</text>
+                            <text x="345" y="190" font-size="10" fill="#ffd700" opacity="0.7" font-family="serif">✦</text>
+                            <!-- Label -->
+                            <text x="250" y="348" text-anchor="middle" font-family="'Playfair Display',serif" font-size="13" fill="rgba(255,255,255,0.7)" letter-spacing="2">Stellar Bloom Studios</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section section-spacing" aria-label="Contact">
+            <div class="container text-center">
+                <h2 class="section-title reveal-item">Ready to Cultivate Your Cosmic Project?</h2>
+                <p class="contact-intro reveal-item">
+                    To begin our journey, send your coordinates through the form below. I'm excited to help your ideas blossom!
+                </p>
+                <!-- FIX: No <form> action POST — client-side validation + simulated submission -->
+                <form id="contact-form" class="contact-form reveal-item" novalidate aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="name">Your Stellar Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Andromeda Voyager" autocomplete="name" required aria-required="true" aria-describedby="name-error">
+                        <span class="field-error" id="name-error" role="alert">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Cosmic Address (Email):</label>
+                        <input type="email" id="email" name="email" placeholder="stardust@galaxymail.com" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+                        <span class="field-error" id="email-error" role="alert">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Project Seed (Details):</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Describe the cosmic bloom you wish to grow…" aria-describedby="message-error"></textarea>
+                        <span class="field-error" id="message-error" role="alert">Please describe your project.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><span>Send Cosmic Pulse</span></button>
+                    <div id="form-feedback" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer text-center">
+        <div class="container">
+            <p>&copy; 2025 Stellar Bloom Studios. All rights reserved. Cultivated with cosmic dust.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</html>
