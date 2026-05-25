@@ -282,7 +282,7 @@ Simply include a copy of the license and give credit to the original author.
 
 **Your Name / Studio Name**
 
-- 🌐 Website: [your-website.com](https://your-website.com)
+
 - 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 - 🐙 GitHub: [@yourprofile](https://github.com/yourprofile)
 - 📧 Email: your.email@example.com
