@@ -282,8 +282,8 @@ Simply include a copy of the license and give credit to the original author.
 
 **Your Name / Studio Name**
 
-- 🐙 GitHub: [@yourprofile](https://github.com/affan675)
-- 📧 Email: your.affanadil119@gmail.com
+- 🐙 GitHub: [@Visit Profile](https://github.com/affan675)
+- 📧 Email: affanadil119@gmail.com
 
 ---
 
